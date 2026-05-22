@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Checkout graylog2-server
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Graylog2/graylog2-server
           path: graylog2-server
@@ -39,13 +39,13 @@ jobs:
           yarn build-storybook
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: graylog2-server/graylog2-web-interface/docs/graylog-luma/storybook-static
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
