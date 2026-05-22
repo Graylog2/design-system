@@ -1,0 +1,51 @@
+name: Deploy Storybook
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout graylog2-server
+        uses: actions/checkout@v4
+        with:
+          repository: Graylog2/graylog2-server
+          path: graylog2-server
+
+      - name: Build Storybook
+        working-directory: graylog2-server/graylog2-web-interface
+        run: |
+          yarn install
+          cd docs/graylog-luma
+          yarn install
+          yarn build-storybook
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: graylog2-server/graylog2-web-interface/docs/graylog-luma/storybook-static
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

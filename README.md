@@ -2,7 +2,7 @@
 
 The Graylog Design System is a shared design language and component library for building consistent, accessible Graylog interfaces.
 
-See the live version at [https://graylog2.github.io/design-system/](https://graylog2.github.io/design-system/).
+This repository contains only the GitHub actions deployment workflow. See the live version at [https://graylog2.github.io/design-system/](https://graylog2.github.io/design-system/).
 
 The [source code](https://github.com/Graylog2/graylog2-server/tree/master/graylog2-web-interface/docs/graylog-luma) for the design system is part of the [graylog2-server](https://github.com/Graylog2/graylog2-server) repository.
 
@@ -17,7 +17,5 @@ The [source code](https://github.com/Graylog2/graylog2-server/tree/master/graylo
 7. Open `http://localhost:6006`
 
 ## Contribute
-
-> This repository contains the Storybook production build and should not be edited by hand.
 
 To contribute, make changes [in the graylog2-server repo](https://github.com/Graylog2/graylog2-server/tree/master/docs/graylog-luma).
