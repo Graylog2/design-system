@@ -1,8 +1,8 @@
 # Graylog Design System
 
-Graylog frontend documentation and component gallery. See the live version at:
+The Graylog Design System is a shared design language and component library for building consistent, accessible Graylog interfaces.
 
-[https://graylog2.github.io/design-system/](https://graylog2.github.io/design-system/)
+See the live version at [https://graylog2.github.io/design-system/](https://graylog2.github.io/design-system/).
 
 The [source code](https://github.com/Graylog2/graylog2-server/tree/master/graylog2-web-interface/docs/graylog-luma) for the design system is part of the [graylog2-server](https://github.com/Graylog2/graylog2-server) repository.
 
