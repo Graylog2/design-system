@@ -18,4 +18,4 @@ The [source code](https://github.com/Graylog2/graylog2-server/tree/master/graylo
 
 ## Contribute
 
-To contribute, make changes [in the graylog2-server repo](https://github.com/Graylog2/graylog2-server/tree/master/docs/graylog-luma).
+To contribute, make changes to the design system source code [in the graylog2-server repo](https://github.com/Graylog2/graylog2-server/tree/master/graylog2-web-interface/docs/graylog-luma).
